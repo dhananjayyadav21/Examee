@@ -84,18 +84,15 @@ nav {
     justify-content: center;
 }
 
+.checkbox-form-group{
+    margin-left: 8px;
+}
+
 .form-register-second-group {
     margin-left: 10px;
     text-decoration: none;
 }
 
-.checkbox-form-group{
-    margin-left: 8px;
-}
-
-.forget-password-group {
-    text-decoration: none;
-}
 
 /* 700px ka */
 @media only screen and (min-width: 700px) {
@@ -107,5 +104,10 @@ nav {
     .container {
         display: flex;
         justify-content: center;
+    }
+
+    .input-group-inline{
+        display: inline-block;
+        width: 49% !important;
     }
 }
