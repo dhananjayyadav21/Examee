@@ -19,32 +19,35 @@
     </nav>
 
 
-<form action="">
+<form action="/register" id="registerForm">
     <div class="container">
         <div class="loginpage">
             
             <h2 class="page-heading">Create Your Account</h2>
             <div class="username form-input-group input-group-inline">
                 <label class="input-label">First Name</label><br>
-                <input class="form-input" type="text" placeholder="Your First Name">
+                <input class="form-input" type="text" placeholder="Your First Name" name="firstname">
             </div>
 
             <div class="Password form-input-group input-group-inline">
                 <label class="input-label">Last Name</label><br>
-                <input class="form-input" type="text" placeholder="Your Last Name">
+                <input class="form-input" type="text" placeholder="Your Last Name" name="lastname">
             </div>
 
             <div class="Password form-input-group  input-group-inline ">
                 <label class="input-label">E-mail Address</label><br>
-                <input class="form-input" type="text" placeholder="Enter E-mail Address">
+                <input class="form-input" type="email" placeholder="Enter E-mail Address" name="email">
             </div>
 
             <div class="username form-input-group input-group-inline ">
                 <label class="input-label">Mobile Number</label><br>
-                <input class="form-input" type="text" placeholder="Enter Your Mobile Number">
+                <input class="form-input" type="tel" placeholder="Enter Your Mobile Number" name="mobilenumber">
             </div>
         
-            
+            <div class="username form-input-group input-group-inline ">
+                <label class="input-label">Password</label><br>
+                <input class="form-input" type="password" placeholder="Enter Your Mobile Number" name="password">
+            </div>
 
             <div class="remember-forget form-input-group">
                 <div class="d-flex">
@@ -62,6 +65,36 @@
         </div>
     </div>
 </form>
+
+
+<script src="js/myscript.js"></script>
+<script>
+
+document.addEventListener("DOMContentLoaded",function () {
+    
+    let form = document.getElementById("registerForm");
+
+    form.addEventListener("submit",function (e) {
+        e.preventDefault();
+
+        let formData = new FormData(form);
+
+        
+
+        console.log("hello");
+
+        formData.values().forEach(element => {
+            console.log(element);
+        });
+
+        
+
+    });
+    
+
+});
+
+</script>
 </body>
 
 </html>
