@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    max-width: 100vw;
+    background-image: url(img/banner2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* nav baar */
+nav {
+    width: 100vw;
+    background-color: rgb(255, 255, 255);
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav div {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    padding: 0 20px;
+    color: black;
+    font-size: large;
+    font-weight: 400;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav a:hover {
+    font-weight: 600;
+}
+
+/* nav side baar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: white;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+nav a li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.sidebar li {
+    margin: 10px;
+}
+
+.menunav {
+    display: none;
+}
+
+/* main containt */
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+/* left-side */
+.info {
+    display: flex;
+    align-items: center;
+    height: 80vh;
+    margin-left: 10%;
+    width: 100%;
+}
+
+.searchbox {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: flex-start;
+}
+
+.searchbox h1 {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.searchbox span {
+    color: blueviolet;
+}
+
+.searchbox input {
+    width: 45vw;
+    padding: 12px;
+    border-radius: 20px;
+    border-style: none;
+    margin: 15px 0;
+}
+
+.searchbox h3 {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.login-btn{
+    cursor: pointer;
+    margin-top: 20px;
+    padding: 10px;
+    width: 40%;
+    border-radius: 12px;
+    border-style: none;
+    font-size: medium;
+    font-weight: 600;
+    background-color: rgba(45, 237, 45, 0.896);
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+.login-btn:hover{
+    background-color: aliceblue;
+    color:  rgba(45, 237, 45, 0.896);
+    border: 1px solid rgba(45, 237, 45, 0.896);
+}
+
+
+/* right-side */
+
+
+
+/* 1200px ka */
+@media only screen and (max-width: 1200px) {
+    nav a {
+        padding: 0 20px;
+        color: black;
+        font-size: medium;
+        font-weight: 499;
+    }
+}
+
+/* 960px ka*/
+@media only screen and (max-width: 860px) {
+  
+}
+
+/* 870px ka*/
+@media only screen and (max-width: 860px) {
+    nav a {
+        padding: 0 15px;
+        color: black;
+        font-size: medium;
+        font-weight: 499;
+    }
+}
+
+/* 800px ka */
+@media only screen and (max-width: 800px) {
+    .rightnav {
+        display: none;
+    }
+
+    .menunav {
+        display: block;
+    }
+
+    .Category {
+        display: none;
+    }
+
+    .logo {
+        width: 120px;
+        height: 100%;
+    }
+}
+
+/* 700px ka */
+@media only screen and (max-width: 700px){
+    .searchbox h1 {
+        font-size: 40px;
+        font-weight: 500;
+    }
+
+    .searchbox input {
+        width: 80%;
+        padding: 12px;
+        border-radius: 20px;
+        border-style: none;
+    }
+
+    .searchbox h3 {
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
+
+/* 400px ka */
+@media only screen and (max-width: 400px) {
+    .logo {
+        width: 130px;
+        height: 100%;
+    }
+}
+
+/* 350px ka */
+@media only screen and (max-width: 350px) {
+    .logo {
+        display: none;
+    }
+}

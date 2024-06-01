@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    width: 100vw;
+    background-color: rgb(255, 252, 252);
+    box-shadow: 0px 1px 5px 0 #888888;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h3{
+    margin:40px;
+}
