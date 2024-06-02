@@ -7,8 +7,8 @@
 /* nav-bar css */
 nav {
     width: 100vw;
-    background-color: rgb(255, 252, 252);
-    box-shadow: 0px 1px 5px 0 #888888;
+    background-color: rgba(104, 102, 102, 0.16);
+    box-shadow: 0px 1px 12px 0 #888888;
     list-style: none;
     display: flex;
     justify-content: space-between;
@@ -16,12 +16,17 @@ nav {
 }
 
 .brand-logo-group{
-    margin: 2px 10px;
+    margin: 15px 0 15px 12px;
 }
 
 
 
 /*card css */
+
+.grid{
+    margin-top: 20px;
+}
+
 .sem-notes-group{
      margin-bottom: 100px;
 }
@@ -85,6 +90,18 @@ button:hover {
         text-align: center;
         grid-gap: 30px;
     }
+
+    .brand-logo-group{
+        width: 130px;
+        height: 35px; 
+        margin: 15px;  
+  }
+
+  nav{
+      background-color: rgba(137, 131, 131, 0.084);
+  }
+
+
     }     
 
 @media only screen and (min-width: 1100px){
