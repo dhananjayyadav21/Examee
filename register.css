@@ -4,21 +4,8 @@
     box-sizing: border-box;
 }
 
-nav {
-    width: 100vw;
-    background-color: rgba(104, 102, 102, 0.16);
-    box-shadow: 0px 1px 12px 0 #888888;
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
-.brand-logo-group{
-    margin: 15px 0 15px 12px;
-}
-
-
+/* register form css */
 .loginpage {
     display: flex;
     flex-direction: column;
@@ -89,7 +76,7 @@ nav {
     justify-content: center;
 }
 
-.checkbox-form-group{
+.checkbox-form-group {
     margin-left: 8px;
 }
 
@@ -99,18 +86,8 @@ nav {
 }
 
 
-/* 700px ka */
+/*  media query 700px ka */
 @media only screen and (min-width: 700px) {
-
-    .brand-logo-group{
-          width: 130px;
-          height: 35px; 
-          margin: 15px;  
-    }
-
-    nav{
-        background-color: rgba(137, 131, 131, 0.084);
-    }
 
     .loginpage {
         width: 50%;
@@ -121,7 +98,7 @@ nav {
         justify-content: center;
     }
 
-    .input-group-inline{
+    .input-group-inline {
         display: inline-block;
         width: 49% !important;
     }

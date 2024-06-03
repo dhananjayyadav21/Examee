@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>notes</title>
     <link rel="stylesheet" href="notes.css">
+    <link rel="stylesheet" href="nav.css">
 </head>
 
 <body>
@@ -17,9 +18,47 @@
                 <li><img class="brand-logo-group" src="img/brandlog.png" class="logo" width="110px" height="30px"></li>
             </a>
         </div>
+
+        <div class="menunav"> <a href="#">
+            <li onclick=showSidebar()><img src="img/icons8-menu-24.png"></li>
+          </a>
+        </div>
+
+      <!-- sidebaar -->
+    <div class="sidebar">
+        <a href="#">
+          <li onclick=closeSidebar()><img src="img/icons8-cross-30.png"></li>
+        </a>
+        <a href="#">
+            <li><img class="sidebaar-tital-img" src="img/category.png" width="25px" height="25px"><select class="select-option-group" name="degree" id="">
+              <option value="0" hidden>Category</option>
+                <option value="BSC-IT">BSC-IT</option>
+                <option value="MSC-IT">MSC-IT</option>
+                <option value="B.COM">B.COM</option>
+                <option value="12TH-SCIENCE">12TH-SCIENCE</option>
+                <option value="12TH-COMMERCE">12TH-COMMERCE</option>
+              </select></li>
+          </a>
+        <a href="/Examee/notes.html">
+          <li><img class="sidebaar-tital-img" src="img/icons8-notes-50.png" width="15px" height="15px">Notes</li>
+        </a>
+        <a href="/Examee/practical.html">
+          <li><img class="sidebaar-tital-img" src="img/icons8-computer-30.png" width="15px" height="15px">Practical </li>
+        </a>
+        <a href="/Examee/assignment.html">
+          <li><img class="sidebaar-tital-img" src="img/corrective_11907117.png" width="15px" height="15px">Assignment </li>
+        </a>
+        <a href="/Examee/cource.html">
+          <li><img class="sidebaar-tital-img" src="img/icons8-course-80.png" width="15px" height="15px">Cources </li>
+        </a>
+        <a href="/Examee/video.html">
+           <li><img class="sidebaar-tital-img" src="img/icons8-video-50.png" width="15px" height="15px">Video</li>
+        </a>
+      </div>
+
     </nav>
 
-
+    
     <!--card for  notes -->
 <div class="grid">
     <!--card for SEM-I notes -->
@@ -112,7 +151,7 @@
     <div class="card-cantainer">
         <div class="card">
             <div class="nots-name">
-                <h2>Computer Graphics</h2><img class="notes-group-img" src="notesimg/web-development.png" width="40px">
+                <h2>Computer Graphics</h2><img class="notes-group-img" src="notesimg/COMPUTER GRAPHICS logo.png" width="40px">
             </div>
             <p>Click the button below to download your notes.</p>
             <button id="downloadBtn">Download Notes</button>
@@ -173,6 +212,19 @@
     </div>
 </div>
 </div>
+
+    <script>
+        function showSidebar() {
+          const sidebar = document.querySelector('.sidebar')
+          sidebar.style.display = 'flex'
+        }
+  
+        function closeSidebar() {
+          const sidebar = document.querySelector('.sidebar')
+          sidebar.style.display = 'none'
+        }
+  
+      </script>
 
 </body>
 

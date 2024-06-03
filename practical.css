@@ -4,36 +4,20 @@
     box-sizing: border-box;
 }
 
-nav {
-    width: 100vw;
-    background-color: rgba(104, 102, 102, 0.16);
-    box-shadow: 0px 1px 12px 0 #888888;
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.brand-logo-group{
-    margin: 15px 0 15px 12px;
-}
-
-
 /*card css */
-
-.grid{
+.grid {
     margin-top: 20px;
 }
 
-.sem-notes-group{
+.sem-notes-group {
     margin-bottom: 100px;
 }
 
-.card-cantainer{
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
+.card-cantainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .card {
@@ -80,7 +64,7 @@ button:hover {
 }
 
 /* media queri for dextop side */
-@media only screen and (min-width: 700px){
+@media only screen and (min-width: 700px) {
     .grid {
         border: none;
         display: grid;
@@ -88,30 +72,19 @@ button:hover {
         text-align: center;
         grid-gap: 30px;
     }
-
-    .brand-logo-group{
-        width: 130px;
-        height: 35px; 
-        margin: 15px;  
-  }
-
-  nav{
-      background-color: rgba(137, 131, 131, 0.084);
-  }
-
-    }     
-
-@media only screen and (min-width: 1100px){
-.grid {
-    border: none;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    text-align: center;
-    grid-gap: 30px;
 }
-}  
 
-@media only screen and (min-width: 1400px){
+@media only screen and (min-width: 1100px) {
+    .grid {
+        border: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        text-align: center;
+        grid-gap: 30px;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
     .grid {
         border: none;
         display: grid;
@@ -119,4 +92,4 @@ button:hover {
         text-align: center;
         grid-gap: 30px;
     }
-    }  
+}
