@@ -88,6 +88,10 @@ nav a li {
     margin: 10px;
 }
 
+.sidebaar-tital-img{
+    margin-right: 4px;
+}
+
 .menunav {
     display: none;
 }
