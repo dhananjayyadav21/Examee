@@ -11,7 +11,10 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.font-family-Segoe-UI{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; ;
 }
 
 /* nav baar */
@@ -48,6 +51,9 @@ nav a:hover {
     font-weight: 600;
 }
 
+
+
+
 /*select category option */
 .select-option-group{
     border: none;
@@ -61,6 +67,10 @@ nav a:hover {
   }
 
 
+
+
+
+
 /* nav side baar */
 .sidebar {
     position: fixed;
@@ -70,7 +80,6 @@ nav a:hover {
     width: 250px;
     z-index: 999;
     background-color: white;
-    backdrop-filter: blur(10px);
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
     display: none;
     flex-direction: column;
@@ -86,6 +95,7 @@ nav a li {
 
 .sidebar li {
     margin: 10px;
+    font-size: large;
 }
 
 .sidebaar-tital-img{
@@ -95,6 +105,10 @@ nav a li {
 .menunav {
     display: none;
 }
+
+
+
+
 
 /* main containt */
 .main {
@@ -164,8 +178,6 @@ nav a li {
 }
 
 
-/* right-side */
-
 
 
 /* 1200px ka */
@@ -210,7 +222,6 @@ nav a li {
     .logo {
         width: 120px;
         height: 100%;
-
     }
 }
 
@@ -221,14 +232,12 @@ nav a li {
         font-size: 40px;
         font-weight: 500;
     }
-
     .searchbox input {
         width: 80%;
         padding: 12px;
         border-radius: 20px;
         border-style: none;
     }
-
     .searchbox h3 {
         font-size: 20px;
         font-weight: 600;
