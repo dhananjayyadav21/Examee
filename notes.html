@@ -31,15 +31,16 @@
                 <li onclick=closeSidebar()><img src="img/icons8-cross-30.png"></li>
             </a>
             <a href="#">
-                <li><img class="sidebaar-tital-img" src="img/category.png" width="25px" height="25px"><select
-                        class="select-option-group" name="degree" id="">
+                <li><img class="sidebaar-tital-img" src="img/category.png" width="25px" height="25px">
+                    <select id="categoryOption" class="select-option-group" name="degree" id="">
                         <option value="0" hidden>Category</option>
                         <option value="BSC-IT">BSC-IT</option>
                         <option value="MSC-IT">MSC-IT</option>
                         <option value="B.COM">B.COM</option>
                         <option value="12TH-SCIENCE">12TH-SCIENCE</option>
                         <option value="12TH-COMMERCE">12TH-COMMERCE</option>
-                    </select></li>
+                    </select>
+                </li>
             </a>
             <a href="/notes.html">
                 <li><img class="sidebaar-tital-img" src="img/icons8-notes-50.png" width="15px" height="15px">Notes</li>
@@ -65,96 +66,116 @@
 
 
     <!--card for  notes -->
-    <div class="grid">
+    <div class="grid" id="grid">
         <!--card for SEM-I notes -->
-        <div class="sem-notes-group">
+        <!-- <div class="sem-notes-group">
             <div class="card-cantainer">
                 <h2>SEMISTER-I NOTES</h2>
                 <div class="card">
                     <img class="notes-group-img" src="notesimg/MATSH SEM 1.png" width="75px">
                     <h3 class="nots-name">Maths Sem-I</h3>
                     <p>Download Your Notes</p>
-                    <button id="downloadBtn"><a href="https://drive.google.com/file/d/1z_sjSCMeMoqYO2sKo1mFRq1fHfyAbg6W/view?usp=drivesdk">Download Notes</a></button>
+                    <button id="downloadBtn"><a
+                            href="https://drive.google.com/file/d/1z_sjSCMeMoqYO2sKo1mFRq1fHfyAbg6W/view?usp=drivesdk">Download
+                            Notes</a></button>
                 </div>
 
                 <div class="card">
                     <img class="notes-group-img" src="notesimg/OS.png" width="75px">
                     <h3 class="nots-name">Operating System</h3>
                     <p>Download Your Notes</p>
-                    <button id="downloadBtn"><a href="https://drive.google.com/file/d/1zTPyOZFpMyShWtYL5_5nDMFRxrOIs3Vw/view?usp=drivesdk">Download Notes</a></button>
+                    <button id="downloadBtn"><a
+                            href="https://drive.google.com/file/d/1zTPyOZFpMyShWtYL5_5nDMFRxrOIs3Vw/view?usp=drivesdk">Download
+                            Notes</a></button>
                 </div>
 
                 <div class="card">
                     <img class="notes-group-img" src="notesimg/de.png" width="75px">
                     <h3 class="nots-name">Digital Electronics</h3>
                     <p>Download Your Notes</p>
-                    <button id="downloadBtn"><a href="https://drive.google.com/file/d/1z_PeX6AcaXkC1KANQ4qzteu_CRhFvv5k/view?usp=drivesdk">Download Notes</a></button>
+                    <button id="downloadBtn"><a
+                            href="https://drive.google.com/file/d/1z_PeX6AcaXkC1KANQ4qzteu_CRhFvv5k/view?usp=drivesdk">Download
+                            Notes</a></button>
                 </div>
 
                 <div class="card">
                     <img class="notes-group-img" src="notesimg/c.png" width="75px">
                     <h3 class="nots-name">C Programming (IP)</h3>
                     <p>Download Your Notes</p>
-                    <button id="downloadBtn"><a href="https://drive.google.com/file/d/1zhH0Xm2r2ilSJQn4Kyn4SEx0IJAb73W1/view?usp=drivesdk">Download Notes</a></button>
+                    <button id="downloadBtn"><a
+                            href="https://drive.google.com/file/d/1zhH0Xm2r2ilSJQn4Kyn4SEx0IJAb73W1/view?usp=drivesdk">Download
+                            Notes</a></button>
                 </div>
 
                 <div class="card">
                     <img class="notes-group-img" src="notesimg/database-management.png" width="75px">
                     <h3 class="nots-name">DBMS</h3>
                     <p>Download Your Notes</p>
-                    <button id="downloadBtn"><a href="https://drive.google.com/file/d/1zoxyZL6Z1c5FRmyf_pVFUF9vvdcB5An2/view?usp=drivesdk">Download Notes</a></button>
+                    <button id="downloadBtn"><a
+                            href="https://drive.google.com/file/d/1zoxyZL6Z1c5FRmyf_pVFUF9vvdcB5An2/view?usp=drivesdk">Download
+                            Notes</a></button>
                 </div>
             </div>
-        </div>
+        </div> -->
 
 
 
         <!--card for SEM-II  notes -->
-        <div class="sem-notes-group">
+        <!-- <div class="sem-notes-group">
             <div class="card-cantainer">
                 <h2>SEMISTER-II NOTES</h2>
-              
-                    <div class="card">
-                        <img class="notes-group-img" src="notesimg/NSM.png"width="75px">
-                        <h3 class="nots-name">NSM SEM-II</h3>
-                        <p>Download Your Notes</p>
-                        <button id="downloadBtn"><a href="https://drive.google.com/file/d/1-Ay-uNejYx0sQdKrP4W5ozITxSYlnlpZ/view?usp=drivesdk">Download Notes</a></button>
-                    </div>
 
-                    <div class="card">
-                        <img class="notes-group-img" src="notesimg/web-development.png" width="75px">
-                        <h3 class="nots-name">Web Development</h3>
-                        <p>Download Your Notes</p>
-                        <button id="downloadBtn"><a href="https://drive.google.com/file/d/1-7yRM0_hzWMbwx8nywH-KxA_y_-12BrV/view?usp=drivesdk">Download Notes</a></button>
-                    </div>
+                <div class="card">
+                    <img class="notes-group-img" src="notesimg/NSM.png" width="75px">
+                    <h3 class="nots-name">NSM SEM-II</h3>
+                    <p>Download Your Notes</p>
+                    <button id="downloadBtn"><a
+                            href="https://drive.google.com/file/d/1-Ay-uNejYx0sQdKrP4W5ozITxSYlnlpZ/view?usp=drivesdk">Download
+                            Notes</a></button>
+                </div>
 
-                    <div class="card">
-                        <img class="notes-group-img" src="notesimg/CPP.png" width="75px">
-                        <h3 class="nots-name">OOPS (C++)</h3>
-                        <p>Download Your Notes</p>
-                        <button id="downloadBtn"><a href="https://drive.google.com/file/d/1-7hxMVVFOrwAl0UBWwxAJqF03n5gOJC8/view?usp=drivesdk">Download Notes</a></button>
-                    </div>
-                    
-                    <div class="card">
-                        <img class="notes-group-img" src="notesimg/computer-graphic.png" width="75px">
-                        <h3 class="nots-name">Computer Graphics</h3>
-                        <p>Download Your Notes</p>
-                        <button id="downloadBtn"><a href="https://drive.google.com/file/d/1-68WGShY275FUlANnC-jWyB7awEQ7Tlu/view?usp=drivesdk">Download Notes</a></button>
-                    </div>
-               
-                    <div class="card">
-                        <img class="notes-group-img" src="notesimg/MICROPROSSER.png" width="75px">
-                        <h3 class="nots-name">Microprocessor</h3>
-                        <p>Download Your Notes</p>
-                        <button id="downloadBtn"><a href="https://drive.google.com/file/d/1-BSzZxEnfj9FUruKBIvVhIcqTJL68Jln/view?usp=drivesdk">Download Notes</a></button>
-                    </div>
-               
+                <div class="card">
+                    <img class="notes-group-img" src="notesimg/web-development.png" width="75px">
+                    <h3 class="nots-name">Web Development</h3>
+                    <p>Download Your Notes</p>
+                    <button id="downloadBtn"><a
+                            href="https://drive.google.com/file/d/1-7yRM0_hzWMbwx8nywH-KxA_y_-12BrV/view?usp=drivesdk">Download
+                            Notes</a></button>
+                </div>
+
+                <div class="card">
+                    <img class="notes-group-img" src="notesimg/CPP.png" width="75px">
+                    <h3 class="nots-name">OOPS (C++)</h3>
+                    <p>Download Your Notes</p>
+                    <button id="downloadBtn"><a
+                            href="https://drive.google.com/file/d/1-7hxMVVFOrwAl0UBWwxAJqF03n5gOJC8/view?usp=drivesdk">Download
+                            Notes</a></button>
+                </div>
+
+                <div class="card">
+                    <img class="notes-group-img" src="notesimg/computer-graphic.png" width="75px">
+                    <h3 class="nots-name">Computer Graphics</h3>
+                    <p>Download Your Notes</p>
+                    <button id="downloadBtn"><a
+                            href="https://drive.google.com/file/d/1-68WGShY275FUlANnC-jWyB7awEQ7Tlu/view?usp=drivesdk">Download
+                            Notes</a></button>
+                </div>
+
+                <div class="card">
+                    <img class="notes-group-img" src="notesimg/MICROPROSSER.png" width="75px">
+                    <h3 class="nots-name">Microprocessor</h3>
+                    <p>Download Your Notes</p>
+                    <button id="downloadBtn"><a
+                            href="https://drive.google.com/file/d/1-BSzZxEnfj9FUruKBIvVhIcqTJL68Jln/view?usp=drivesdk">Download
+                            Notes</a></button>
+                </div>
+
             </div>
-        </div>
+        </div> -->
 
-        
+
         <!--card for SEM-III  notes -->
-        <div class="sem-notes-group">
+        <!-- <div class="sem-notes-group">
             <div class="card-cantainer">
                 <h2>SEMISTER-III NOTES</h2>
 
@@ -192,8 +213,8 @@
                     <p>Download Your Notes</p>
                     <button id="downloadBtn"><a href="">Download Notes</a></button>
                 </div>
-            </div>     
-        </div>
+            </div>
+        </div> -->
     </div>
 
     <script>
@@ -207,7 +228,7 @@
             sidebar.style.display = 'none'
         }
     </script>
-
+    <script src="script.js"></script>
 </body>
 
 </html>
