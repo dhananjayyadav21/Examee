@@ -31,15 +31,17 @@
                 <li onclick=closeSidebar()><img src="img/icons8-cross-30.png"></li>
             </a>
             <a href="#">
-                <li><img class="sidebaar-tital-img" src="img/category.png" width="25px" height="25px"><select
-                        class="select-option-group" name="degree" id="">
-                        <option value="0" hidden>Category</option>
-                        <option value="BSC-IT">BSC-IT</option>
-                        <option value="MSC-IT">MSC-IT</option>
-                        <option value="B.COM">B.COM</option>
-                        <option value="12TH-SCIENCE">12TH-SCIENCE</option>
-                        <option value="12TH-COMMERCE">12TH-COMMERCE</option>
-                    </select></li>
+                <li>
+                    <img class="sidebaar-tital-img" src="img/category.png" width="25px" height="25px">
+                    <select id="categoryOption" class="select-option-group" name="degree">
+                      <option value="0" selected disabled>Category</option>
+                      <option class="select-options value="BSC-IT">BSC-IT</option>
+                      <option class="select-options value="MSC-IT">MSC-IT</option>
+                      <option class="select-options value="B.COM">B.COM</option>
+                      <option class="select-options value="12TH-SCIENCE">12TH-SCIENCE</option>
+                      <option class="select-options  value="12TH-COMMERCE">12TH-COMMERCE</option>
+                    </select>
+                  </li>
             </a>
             <a href="/notes.html">
                 <li><img class="sidebaar-tital-img" src="img/icons8-notes-50.png" width="15px" height="15px">Notes</li>
@@ -66,8 +68,9 @@
 
 
     <!--card  -->
-    <div class="grid">
+    <div class="grid" id="grid">
         <!--sem-I card -->
+        <!--
         <div class="sem-notes-group">
             <div class="card-cantainer">
                 <h2>Semester-I Practical</h2>
@@ -102,6 +105,7 @@
         </div>
 
         <!--sem-II card -->
+        <!--
         <div class="sem-notes-group">
             <div class="card-cantainer">
                 <h2>Semester-II Practical</h2>
@@ -123,6 +127,7 @@
         </div>
 
         <!--sem-III card -->
+        <!--
         <div class="sem-notes-group">
             <div class="card-cantainer">
                 <h2>Semester-III Practical</h2>
@@ -161,8 +166,7 @@
                     <button id="downloadBtn"><a href="">Journal PDF</a></button>
                 </div>
             </div>
-        </div>
-
+        </div> -->
     </div>
 
     <script>
@@ -177,6 +181,7 @@
         }
     </script>
  <script src="script.js"></script>
+ <script src="practical.js"></script>
 </body>
 
 </html>

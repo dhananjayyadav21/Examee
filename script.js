@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
         reloadData();
     }
 
-
+/* other pages script for each alag 
     async function reloadData() {
         let categoryOption = document.getElementById("categoryOption");
         let defaultSelectedCategory = sessionStorage.getItem("categoryOption");
@@ -217,9 +217,6 @@ document.addEventListener("DOMContentLoaded", function () {
             return filterdData.Sems;
         }
         return [];
-    }
-
-
-
+    }*/
 
 });
