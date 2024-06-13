@@ -31,15 +31,17 @@
         <li onclick=closeSidebar()><img src="img/icons8-cross-30.png"></li>
       </a>
       <a href="#">
-        <li><img class="sidebaar-tital-img" src="img/category.png" width="25px" height="25px"><select
-            class="select-option-group" name="degree" id="">
-            <option value="0" hidden>Category</option>
-            <option value="BSC-IT">BSC-IT</option>
-            <option value="MSC-IT">MSC-IT</option>
-            <option value="B.COM">B.COM</option>
-            <option value="12TH-SCIENCE">12TH-SCIENCE</option>
-            <option value="12TH-COMMERCE">12TH-COMMERCE</option>
-          </select></li>
+        <li>
+          <img class="sidebaar-tital-img" src="img/category.png" width="25px" height="25px">
+          <select id="categoryOption" class="select-option-group" name="degree">
+            <option value="0" selected disabled>Category</option>
+            <option class="select-options value="BSC-IT">BSC-IT</option>
+            <option class="select-options value="MSC-IT">MSC-IT</option>
+            <option class="select-options value="B.COM">B.COM</option>
+            <option class="select-options value="12TH-SCIENCE">12TH-SCIENCE</option>
+            <option class="select-options  value="12TH-COMMERCE">12TH-COMMERCE</option>
+          </select>
+        </li>
       </a>
       <a href="/notes.html">
         <li><img class="sidebaar-tital-img" src="img/icons8-notes-50.png" width="15px" height="15px">Notes</li>
@@ -47,7 +49,7 @@
       <a href="/practical.html">
         <li><img class="sidebaar-tital-img" src="img/icons8-computer-30.png" width="15px" height="15px">Practical </li>
       </a>
-      <a href="/assignment.html">
+      <a href="/Qution-Paper.html">
         <li><img class="sidebaar-tital-img" src="img/corrective_11907117.png" width="15px" height="15px">Qution-Paper
         </li>
       </a>
@@ -159,7 +161,7 @@
     </div>
 
     <!--SECOND SEM QUTION PAPER-->
-    <div class="card-cantainer">
+    <div class="card-cantainer" >
       <h2>SEM-II QUTION-PAPER </h2>
       <div class="card">
         <div class="left">
