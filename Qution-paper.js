@@ -296,7 +296,7 @@ async function loadData(categoryName) {
             "Name": "12TH-COMMERCE",
             "Sems": [
                 {
-                    "Name": "B.COM",
+                    "Name": "12TH-COMMERCE",
                     "Notes": [
                         {
                             "Subject": "Mathamatics & Statics",
