@@ -21,17 +21,21 @@
 }
 
 .card {
-    background: #c9e6e377;
+    background: #dbe5e477;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 28px 14px;
     text-align: center;
     width: 300px;
     margin: 20px;
 }
 
 h2 {
-    margin-top: 0;
+    margin-top: 15PX;
+}
+
+.tital{
+   padding: 10PX 0;
 }
 
 textarea {
@@ -46,7 +50,7 @@ textarea {
 }
 
 button {
-    background-color: #2b8d54;
+    background-color: #249453;
     border: none;
     color: white;
     padding: 10px 20px;
@@ -61,6 +65,11 @@ button {
 
 button:hover {
     background-color: #146636;
+}
+
+button a{
+    text-decoration: none;
+    color: white;
 }
 
 /* media queri for dextop side */

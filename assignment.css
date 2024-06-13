@@ -4,7 +4,52 @@
     box-sizing: border-box;
 }
 
-h3{
-    margin:40px;
+h3 {
+    margin: 40px;
 }
 
+/* card css */
+.card-cantainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background: #c6c2c2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin: 10px;
+    padding: 0 20px;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+button {
+    background-color: #249453;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: medium;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #146636;
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+}

@@ -21,20 +21,15 @@
 }
 
 .nots-name {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+   padding: 10px 0;
 }
 
-.notes-group-img {
-    margin-left: 8px;
-}
 
 .card {
     background: #e6eaed;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 18px;
+    padding: 28px 14PX;
     text-align: center;
     width: 300px;
     margin: 20PX;
@@ -62,6 +57,10 @@ button:hover {
     background-color: #0056b3;
 }
 
+button a{
+    text-decoration: none;
+    color: white;
+}
 
 /* media queri for dextop side */
 @media only screen and (min-width: 700px) {
