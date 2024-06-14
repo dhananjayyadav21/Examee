@@ -30,7 +30,7 @@ async function reloadData() {
 
             const cardHTML = `
                  <div class="left">
-                <img src="img/corrective_11907117.png" height="50px">
+                <img class="notes-group-img" src="/notesimg/${element.converImage}" width="50px" onerror="this.onerror=null;this.src='/notesimg/practical-III.png';">
                 <p>${element.Subject}</p>
                  </div>
                 <div class="right">
@@ -299,7 +299,7 @@ async function loadData(categoryName) {
                     "Name": "12TH-COMMERCE",
                     "Notes": [
                         {
-                            "Subject": "Mathamatics & Statics",
+                            "Subject": "Maths",
                             "converImage": "image9.jpg",
                             "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy/view?usp=drivesdk"
                         },
@@ -309,7 +309,7 @@ async function loadData(categoryName) {
                             "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy/view?usp=drivesdk"
                         },
                         {
-                            "Subject": "Book Kepping and Accountancy",
+                            "Subject": "Book Kepping ",
                             "converImage": "image9.jpg",
                             "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy/view?usp=drivesdk"
                         },
@@ -319,7 +319,7 @@ async function loadData(categoryName) {
                             "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy/view?usp=drivesdk"
                         },
                         {
-                            "Subject": "Accountancy",
+                            "Subject": "Account-ancy",
                             "converImage": "image10.jpg",
                             "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy/view?usp=drivesdk"
                         }

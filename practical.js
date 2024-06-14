@@ -29,7 +29,7 @@ async function reloadData() {
         sem.Notes.forEach(element => {
 
             const cardHTML = `
-                <img src="notesimg/practical-II.png" width="70px">
+                <img src="/notesimg/${element.converImage}" width="70px" onerror="this.onerror=null;this.src='/notesimg/practical-III.png';">
                     <h3 class="tital">${element.Subject}</h3>
                     <p>Download Journal Here</p>
                     <button id="downloadBtn"><a href="${element.NotesUrl}">Journal PDF</a></button>`;
@@ -57,23 +57,23 @@ async function loadData(categoryName) {
                     "Notes": [
                         {
                             "Subject": "Math (DM)",
-                            "converImage": "image",
+                            "converImage": "practical-II.png",
                             "NotesUrl": "https://drive.google.com/file/d/1-N3PaBhkjZzhA7F2IdDps2jaxvRg5U12/view?usp=drivesdk"
                         },
                         {
                             "Subject": "Operating System",
-                            "converImage": "image2.jpg",
+                            "converImage": "practical-II.png",
                             "NotesUrl": "https://drive.google.com/file/d/1-MP2TP9fdJC6K930pvejxAYketVl8Ns2/view?usp=drivesdk"
                         },
                         
                         {
                             "Subject": "C Programming (IP)",
-                            "converImage": "image",
+                            "converImage": "practical-II.png",
                             "NotesUrl": "https://drive.google.com/file/d/1-NtrQ92tCdD446yscRn9C_njU8Q4R63a/view?usp=drivesdk"
                         },
                         {
                             "Subject": "DBMS",
-                            "converImage": "image",
+                            "converImage": "practical-II.png",
                             "NotesUrl": "https://drive.google.com/file/d/1-OOvTaamHI7X3pu5lHa5jpDIAYkvqNGh/view?usp=drivesdk"
                         },
 
@@ -84,12 +84,12 @@ async function loadData(categoryName) {
                     "Notes": [
                         {
                             "Subject": "Web Development",
-                            "converImage": "image4.jpg",
+                            "converImage": "practical-I.png",
                             "NotesUrl": "https://drive.google.com/file/d/1-QI0VwfweTO0rJAAp5Cd2g0XowyiwZF7/view?usp=drivesdk"
                         },
                         {
                             "Subject": "OOPS (C++)",
-                            "converImage": "image3.jpg",
+                            "converImage": "practical-I.png",
                             "NotesUrl": "https://drive.google.com/file/d/1-Rqw-vrIDraXpmBv9FqkMAwC9kVMgynf/view?usp=drivesdk"
                         },
                     ]

@@ -27,9 +27,8 @@ async function reloadData() {
         console.log(sem)
 
         sem.Notes.forEach(element => {
-
             const cardHTML = `
-                <img class="notes-group-img" src="notesimg/MATSH SEM 1.png" width="75px">
+                <img class="notes-group-img" src="/notesimg/${element.converImage}" width="75px" onerror="this.onerror=null;this.src='/notesimg/default-notes-img.png';">
                 <h3 class="nots-name">${element.Subject}</h3>
                 <p>Download Your Notes</p>
                 <button id="downloadBtn"><a href="${element.NotesUrl}">Download Notes</a></button>`;
@@ -57,27 +56,27 @@ async function loadData(categoryName) {
                     "Notes": [
                         {
                             "Subject": "Math SEM-I",
-                            "converImage": "image",
+                            "converImage": "MATSH SEM 1.png",
                             "NotesUrl": "https://drive.google.com/file/d/1z_sjSCMeMoqYO2sKo1mFRq1fHfyAbg6W/view?usp=drivesdk"
                         },
                         {
                             "Subject": "Operating System",
-                            "converImage": "image2.jpg",
+                            "converImage": "OS.png",
                             "NotesUrl": "https://drive.google.com/file/d/1zTPyOZFpMyShWtYL5_5nDMFRxrOIs3Vw/view?usp=drivesdk"
                         },
                         {
                             "Subject": "Digital Electronics",
-                            "converImage": "image",
+                            "converImage": "de.png",
                             "NotesUrl": "https://drive.google.com/file/d/1z_PeX6AcaXkC1KANQ4qzteu_CRhFvv5k/view?usp=drivesdk"
                         },
                         {
                             "Subject": "C Programming (IP)",
-                            "converImage": "image",
+                            "converImage": "c.png",
                             "NotesUrl": "https://drive.google.com/file/d/1zhH0Xm2r2ilSJQn4Kyn4SEx0IJAb73W1/view?usp=drivesdk"
                         },
                         {
                             "Subject": "DBMS",
-                            "converImage": "image",
+                            "converImage": "database-management.png",
                             "NotesUrl": "https://drive.google.com/file/d/1zoxyZL6Z1c5FRmyf_pVFUF9vvdcB5An2/view?usp=drivesdk"
                         },
 
@@ -88,27 +87,27 @@ async function loadData(categoryName) {
                     "Notes": [
                         {
                             "Subject": "NSM SEM-II",
-                            "converImage": "image3.jpg",
+                            "converImage": "NSM.png",
                             "NotesUrl": "https://drive.google.com/file/d/1-Ay-uNejYx0sQdKrP4W5ozITxSYlnlpZ/view?usp=drivesdk"
                         },
                         {
                             "Subject": "Web Development",
-                            "converImage": "image4.jpg",
+                            "converImage": "web-development.png",
                             "NotesUrl": "https://drive.google.com/file/d/1-7yRM0_hzWMbwx8nywH-KxA_y_-12BrV/view?usp=drivesdk"
                         },
                         {
                             "Subject": "OOPS (C++)",
-                            "converImage": "image3.jpg",
+                            "converImage": "CPP.png",
                             "NotesUrl": "https://drive.google.com/file/d/1-7hxMVVFOrwAl0UBWwxAJqF03n5gOJC8/view?usp=drivesdk"
                         },
                         {
                             "Subject": "Computer Graphics",
-                            "converImage": "image4.jpg",
+                            "converImage": "computer-graphic.png",
                             "NotesUrl": "https://drive.google.com/file/d/1-68WGShY275FUlANnC-jWyB7awEQ7Tlu/view?usp=drivesdk"
                         },
                         {
                             "Subject": "Microprocessor",
-                            "converImage": "image3.jpg",
+                            "converImage": "MICROPROSSER.png",
                             "NotesUrl": "https://drive.google.com/file/d/1-BSzZxEnfj9FUruKBIvVhIcqTJL68Jln/view?usp=drivesdk"
                         },
                        
@@ -129,7 +128,7 @@ async function loadData(categoryName) {
                         },
                         {
                             "Subject": "Distributed System",
-                            "converImage": "image6.jpg",
+                            "converImage": "image5.jpg",
                             "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy/view?usp=drivesdk"
                         },
                         {
