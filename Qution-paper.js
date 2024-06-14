@@ -20,7 +20,7 @@ async function reloadData() {
         cardContainer.className = 'card-cantainer';
 
         const h2 = document.createElement('h2');
-        h2.textContent = `${sem.Name} NOTES`;
+        h2.textContent = `${sem.Name} QP`;
 
         cardContainer.appendChild(h2);
 

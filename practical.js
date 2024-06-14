@@ -20,7 +20,7 @@ async function reloadData() {
         cardContainer.className = 'card-cantainer';
 
         const h2 = document.createElement('h2');
-        h2.textContent = `${sem.Name} NOTES`;
+        h2.textContent = `${sem.Name} PRACTICALS`;
 
         cardContainer.appendChild(h2);
 
@@ -234,7 +234,7 @@ async function loadData(categoryName) {
             "Name": "12TH-COMMERCE",
             "Sems": [
                 {
-                    "Name": "B.COM",
+                    "Name": "12TH-COMMERCE",
                     "Notes": [
                         {
                             "Subject": "Mathamatics & Statics",
