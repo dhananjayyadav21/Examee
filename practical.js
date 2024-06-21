@@ -231,7 +231,7 @@ async function loadData(categoryName) {
             ]
         },
         {
-            "Name": "12TH-COMMERCE",
+            "Name": "COMMERCE",
             "Sems": [
                 {
                     "Name": "12TH-COMMERCE",
