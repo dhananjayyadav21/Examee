@@ -68,12 +68,12 @@
         <h2 class="page-heading">SIGN IN</h2>
         <div class="username form-input-group">
           <label class="input-label">E-mail address</label><br>
-          <input class="form-input" type="text" placeholder="Enter email address" id="email" required>
+          <input class="form-input" type="email" placeholder="Enter email address" id="email" required>
         </div>
 
         <div class="Password form-input-group">
           <label class="input-label">Enter Password</label><br>
-          <input class="form-input" type="text" placeholder="Enter Password" id="password" required>
+          <input class="form-input" type="password" placeholder="Enter Password" id="password" required>
         </div>
 
         <div class="remember-forget form-input-group">
@@ -88,7 +88,7 @@
         </div>
 
         <div class="sumbit form-input-group">
-          <button class="btn" type="submit">Sing In</button>
+          <button class="btn" type="submit" id="login-sumbit-btn">Sing In</button>
         </div>
 
         <div class="form-register-group">
@@ -129,6 +129,7 @@
 
       if (data == null) {
         alert("wrong username or pasword");
+         document.getElementById('login-sumbit-btn').innerHTML="wrong username or pasword"
       }
       else if (email == data.email && password == data.password) {
         alert("login Succesfully");
@@ -136,6 +137,7 @@
       }
       else {
         alert("wrong username or pasword");
+        document.getElementById('login-sumbit-btn').innerHTML="wrong username or pasword"
       }
     });
 
