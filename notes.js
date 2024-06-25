@@ -119,7 +119,7 @@ async function loadData(categoryName) {
                         {
                             "Subject": "DSA",
                             "converImage": "DSA.jpg",
-                            "NotesUrl": "https://drive.google.com/file/d/14AVC-XXF-2zm8fX1D-DsPkeCv9ecBhEC/view?usp=drivesdk"
+                            "NotesUrl": "https://drive.google.com/drive/folders/16ulRRxF7yRP6zhE6GZS8miJ4jpkSz1Y4"
                         },
                         {
                             "Subject": "Computer Network",
@@ -129,14 +129,23 @@ async function loadData(categoryName) {
                         {
                             "Subject": "Python",
                             "converImage": "PYTHON.PNG",
-                            "NotesUrl": "https://drive.google.com/file/d/14BePtlRSVeR-QrJ4hK4hR375uYp8V-Qk/view?usp=drivesdk"
+                            "NotesUrl": "https://drive.google.com/drive/folders/16ryH1diqOdfIbex6qroABTtJ3kQDga98"
                         },
                         {
                             "Subject": "PL/SQL",
                             "converImage": "PL.PNG",
-                            "NotesUrl": "https://drive.google.com/file/d/149sAOi-70xoSZXaQ6f72x51DDybB6t0k/view?usp=drivesdk"
+                            "NotesUrl": "https://drive.google.com/drive/folders/16ugds4t7eUxD4OcLyWsFyQqT2vQNYs-I"
                         },
-                       
+                        {
+                            "Subject": "AM",
+                            "converImage": "PL.PNG",
+                            "NotesUrl": "https://drive.google.com/drive/folders/16zCCXTGv92v9RwOwRlg-tiMZkPJw9jnm"
+                        },
+                        {
+                            "Subject": "Brand Management",
+                            "converImage": "PL.PNG",
+                            "NotesUrl": "https://drive.google.com/drive/folders/16zCCXTGv92v9RwOwRlg-tiMZkPJw9jnm"
+                        },
                        
                     ]
                 }
