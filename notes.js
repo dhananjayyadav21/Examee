@@ -138,12 +138,12 @@ async function loadData(categoryName) {
                         },
                         {
                             "Subject": "AM",
-                            "converImage": "PL.PNG",
+                            "converImage": "am.jpg",
                             "NotesUrl": "https://drive.google.com/drive/folders/16zCCXTGv92v9RwOwRlg-tiMZkPJw9jnm"
                         },
                         {
                             "Subject": "Brand Management",
-                            "converImage": "PL.PNG",
+                            "converImage": "Bm.avif",
                             "NotesUrl": "https://drive.google.com/drive/folders/16zCCXTGv92v9RwOwRlg-tiMZkPJw9jnm"
                         },
                        
