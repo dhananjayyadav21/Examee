@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+/*notes head banner ---------------------------------------------------*/
+.pract-heading-txt {
+    background-color: rgb(255, 255, 255);
+    padding: 2px 0;
+    margin: 10px 0;
+}
+
 /*card css */
 .grid {
     margin-top: 20px;
@@ -21,7 +28,7 @@
 }
 
 .card {
-    background: #dbe5e477;
+    background: #ecf5f477;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 28px 14px;
@@ -91,6 +98,10 @@ button a{
         text-align: center;
         grid-gap: 30px;
     }
+
+    .card {
+        background: #f4f9f977;
+    }
 }
 
 @media only screen and (min-width: 1400px) {
@@ -100,5 +111,9 @@ button a{
       grid-template-columns: 1fr 1fr 1fr 1fr;
         text-align: center;
         grid-gap: 30px;
+    }
+
+    .card {
+        background: #f4f9f977;
     }
 }

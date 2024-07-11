@@ -4,6 +4,19 @@
     box-sizing: border-box;
 }
 
+
+/*notes head banner ---------------------------------------------------*/
+.notes-heading-txt {
+    background-color: rgb(255, 255, 255);
+    padding: 2px 0;
+    margin: 15px 0;
+}
+
+
+
+
+
+
 /*card css */
 .grid {
     margin-top: 20px;
@@ -21,12 +34,12 @@
 }
 
 .nots-name {
-   padding: 10px 0;
+    padding: 10px 0;
 }
 
 
 .card {
-    background: #e6eaed;
+    background: #eaeef1;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 28px 14PX;
@@ -57,7 +70,7 @@ button:hover {
     background-color: #0056b3;
 }
 
-button a{
+button a {
     text-decoration: none;
     color: white;
 }
@@ -82,6 +95,10 @@ button a{
         text-align: center;
         grid-gap: 30px;
     }
+
+    .card {
+        background: #f6f7f9;
+    }
 }
 
 @media only screen and (min-width: 1400px) {
@@ -91,5 +108,9 @@ button a{
         grid-template-columns: 1fr 1fr 1fr 1fr;
         text-align: center;
         grid-gap: 30px;
+    }
+
+    .card {
+        background: #f6f7f9;
     }
 }
