@@ -127,7 +127,7 @@
     //login form js---------------------------------------------
     let form = document.getElementById('form');
 
-    form.addEventListener("submit", (e) => {
+    form.addEventListener("submit", async (e) => {
       e.preventDefault()
       let fname = document.getElementById("fname").value;
       let lname = document.getElementById("lname").value;
@@ -154,9 +154,35 @@
 
       let string = JSON.stringify(userrecord);
       localStorage.setItem("users", string)
-      alert("Register Succesfully");
-      window.location.replace("/login.html")
+      await registerUser(fname,lname,email,password);
+      // alert("Register Succesfully");
+      // window.location.replace("/login.html")
     })
+
+    async function registerUser(fname, lname, email, password) {
+    let url = 'https://script.google.com/macros/s/AKfycbwmubT1V3jYql4NdnFQfg99jAGbDByEA8bLk_bHcf4s_GCR2RiVRMxoUjNQcK3IHgRI6Q/exec';
+    const params = new URLSearchParams({
+        action: 'addUser',
+        fname: fname,
+        lname: lname,
+        email: email,
+        password: password
+    });
+    url = url + '?' + params.toString();
+    try {
+        const response = await fetch(url, {
+            method: 'GET' // If you prefer POST, you can use the previous example with POST method
+        });
+        const result = await response.json();
+        console.log('Add User Response:', result);
+        if (result.code == 201) {
+            alert("Register Succesfully");
+            window.location.replace("/login.html")
+        }
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
 
 
   </script>
