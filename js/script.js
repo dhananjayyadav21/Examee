@@ -1,4 +1,3 @@
-console.log("lets start");
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -18,5 +17,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
         reloadData();
     }
-
 });

@@ -6,8 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Examee</title>
   <link rel="icon" href="img/brandlog.png">
-  <link rel="stylesheet" href="register.css">
-  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="css/register.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <script src="js/login.js"></script>
 </head>
 
 <body>
@@ -92,7 +93,8 @@
 
         <div class="remember-forget form-input-group">
           <div class="d-flex">
-            <input id="check" type="checkbox" required><label for="check" class="checkbox-form-group">I Recive all important
+            <input id="check" type="checkbox" required><label for="check" class="checkbox-form-group">I Recive all
+              important
               e-mails</label>
           </div>
 
@@ -131,7 +133,7 @@
       let lname = document.getElementById("lname").value;
       let email = document.getElementById("email").value;
       let password = document.getElementById("password").value;
-     
+
 
       let userrecord = [];
       let exestinguser = localStorage.getItem("users")
@@ -158,7 +160,8 @@
 
 
   </script>
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
+
 </body>
 
 </html>

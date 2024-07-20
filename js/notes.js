@@ -6,9 +6,9 @@ async function reloadData() {
     if (defaultSelectedCategory == null) {
         defaultSelectedCategory = "BSC-IT"
     }
-    console.log(defaultSelectedCategory)
+
     let data = await loadData(defaultSelectedCategory);
-    console.log(data)
+
 
     let grid = document.getElementById("grid");
     grid.innerHTML = "";

@@ -6,8 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Examee</title>
   <link rel="icon" href="img/brandlog.png">
-  <link rel="stylesheet" href="login.css">
-  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <script src="js/login.js"></script>
 </head>
 
 <body>
@@ -78,7 +79,7 @@
 
         <div class="remember-forget form-input-group">
           <div class="d-flex">
-            <input id="check" type="checkbox" namecheckbox  required><label for="check"
+            <input id="check" type="checkbox" namecheckbox required><label for="check"
               class="checkbox-form-group">Remember</label>
           </div>
 
@@ -129,21 +130,25 @@
 
       if (data == null) {
         alert("wrong username or pasword");
-         document.getElementById('login-sumbit-btn').innerHTML="wrong username or pasword"
+        document.getElementById('login-sumbit-btn').innerHTML = "wrong username or pasword"
       }
       else if (email == data.email && password == data.password) {
         alert("login Succesfully");
+        sessionStorage.setItem("authKey", data.email)
         window.location.replace("/notes.html")
+
       }
+
       else {
         alert("wrong username or pasword");
-        document.getElementById('login-sumbit-btn').innerHTML="wrong username or pasword"
+        document.getElementById('login-sumbit-btn').innerHTML = "wrong username or pasword"
       }
     });
 
 
   </script>
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
+
 </body>
 
 </html>

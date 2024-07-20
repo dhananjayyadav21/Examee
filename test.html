@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Google Apps Script API</title>
+    <script>
+        async function addUser(fname, lname, email, password) {
+            let url = 'https://script.google.com/macros/s/AKfycbwmubT1V3jYql4NdnFQfg99jAGbDByEA8bLk_bHcf4s_GCR2RiVRMxoUjNQcK3IHgRI6Q/exec';
+            const params = new URLSearchParams({
+                action: 'addUser',
+                fname: fname,
+                lname: lname,
+                email: email,
+                password: password
+            });
+            url = url + '?' + params.toString();
+            try {
+                const response = await fetch(url, {
+                    method: 'GET' // If you prefer POST, you can use the previous example with POST method
+                });
+                const result = await response.json();
+                console.log('Add User Response:', result);
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+        // Example usage
+    </script>
+</head>
+
+<body>
+    <h1>Google Apps Script API</h1>
+    <button onclick="addUser('John','Doe', 'john1.doe@example.com','1234')">save</button>
+</body>
+
+</html>
