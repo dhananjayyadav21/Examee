@@ -160,7 +160,7 @@
     })
 
     async function registerUser(fname, lname, email, password) {
-    let url = 'https://script.google.com/macros/s/AKfycbwmubT1V3jYql4NdnFQfg99jAGbDByEA8bLk_bHcf4s_GCR2RiVRMxoUjNQcK3IHgRI6Q/exec';
+    let url = 'https://script.google.com/macros/s/AKfycbzhc1V6aBOk-1wNOuK16Br9hrKCRH6YpUHDxdJqS7K1N-1kVYnFawXMNVKovqZd924VtQ/exec';
     const params = new URLSearchParams({
         action: 'addUser',
         fname: fname,
@@ -178,6 +178,8 @@
         if (result.code == 201) {
             alert("Register Succesfully");
             window.location.replace("/login.html")
+        }else{
+          alert(result.error);
         }
     } catch (error) {
         console.error('Error:', error);

@@ -121,12 +121,12 @@
       let email = document.getElementById("email").value;
       let password = document.getElementById("password").value;
 
-      var user = localStorage.getItem('users');
-      var data = JSON.parse(user);
+      // var user = localStorage.getItem('users');
+      // var data = JSON.parse(user);
 
-      data = data.find(x => {
-        return x.email == email
-      });
+      // data = data.find(x => {
+      //   return x.email == email
+      // });
 
       loginUser(email,password);
 
@@ -148,7 +148,7 @@
     });
 
     async function loginUser(email, password) {
-    let url = 'https://script.google.com/macros/s/AKfycbwmubT1V3jYql4NdnFQfg99jAGbDByEA8bLk_bHcf4s_GCR2RiVRMxoUjNQcK3IHgRI6Q/exec';
+    let url = 'https://script.google.com/macros/s/AKfycbzhc1V6aBOk-1wNOuK16Br9hrKCRH6YpUHDxdJqS7K1N-1kVYnFawXMNVKovqZd924VtQ/exec';
     const params = new URLSearchParams({
         action: 'login',
         email: email,
