@@ -5,12 +5,12 @@ function getLoginUserName() {
 }
 
 let loginUrls = [
-    "/notes.html",
+    // "/notes.html",
     "/practical.html",
     "/Qution-Paper.html",
     "/cource.html",
     "/video.html",
-    "/notes",
+    // "/notes",
     "/practical",
     "/Qution-Paper",
     "/cource",

@@ -12,6 +12,7 @@ async function reloadData() {
 
     let grid = document.getElementById("grid");
     grid.innerHTML = "";
+    const isLogin = getLoginUserName() !=null;
     data.forEach(sem => {
         const semNotesGroup = document.createElement('div');
         semNotesGroup.className = 'sem-notes-group';
@@ -25,13 +26,12 @@ async function reloadData() {
         cardContainer.appendChild(h2);
 
         console.log(sem)
-
         sem.Notes.forEach(element => {
             const cardHTML = `
                 <img class="notes-group-img" src="/notesimg/${element.converImage}" width="75px" onerror="this.onerror=null;this.src='/notesimg/default-notes-img.png';">
                 <h3 class="nots-name">${element.Subject}</h3>
                 <p>Download Your Notes</p>
-                <button id="downloadBtn"><a href="${element.NotesUrl}">Download Notes</a></button>`;
+                <button id="downloadBtn"><a href="${isLogin?element.NotesUrl:"/login.html"}">Download Notes</a></button>`;
 
             let card = document.createElement("div");
             card.className = "card";
@@ -335,5 +335,10 @@ async function loadData(categoryName) {
         return filterdData.Sems;
     }
     return [];
+}
+
+
+function getLoginUserName() {
+    return localStorage.getItem("authKey");
 }
 
