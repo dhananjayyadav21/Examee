@@ -84,12 +84,12 @@
           </div>
 
           <div>
-            <a class="forget-password-group" href="#">Forget Password</a>
+            <a class="forget-password-group" href="/forgot.html">Forget Password</a>
           </div>
         </div>
 
         <div class="sumbit form-input-group">
-          <button class="btn" type="submit" id="login-sumbit-btn">Sing In</button>
+          <button class="btn" type="submit" id="login-sumbit-btn">Sign In</button>
         </div>
 
         <div class="form-register-group">
@@ -148,7 +148,7 @@
     });
 
     async function loginUser(email, password) {
-    let url = 'https://script.google.com/macros/s/AKfycbzhc1V6aBOk-1wNOuK16Br9hrKCRH6YpUHDxdJqS7K1N-1kVYnFawXMNVKovqZd924VtQ/exec';
+    let url = 'https://script.google.com/macros/s/AKfycbzBac00fFptMobH0xi937zs7uroDFu0g0uXbhZCUz-jEkNWf0q0UEaJO3GwkaSNq0DIew/exec';
     const params = new URLSearchParams({
         action: 'login',
         email: email,
@@ -164,7 +164,7 @@
 
         if (userRes != null) {
             if (userRes.code == 200) {
-                sessionStorage.setItem("authKey", userRes.data.userId)
+                localStorage.setItem("authKey", userRes.data.userId)
                 window.location.replace("/notes.html")
             } else {
                 alert(userRes.error)

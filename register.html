@@ -86,10 +86,13 @@
 
         <div class="username form-input-group input-group-inline ">
           <label class="input-label">Password</label><br>
-          <input class="form-input" type="password" placeholder="passwordr" id="password" required>
+          <input class="form-input" type="password" placeholder="Password" id="password" required>
         </div>
 
-
+        <div class="username form-input-group input-group-inline ">
+          <label class="input-label">Confirm Password</label><br>
+          <input class="form-input" type="text" placeholder="Confirm Password" id="confirmpassword" required>
+        </div>
 
         <div class="remember-forget form-input-group">
           <div class="d-flex">
@@ -133,6 +136,7 @@
       let lname = document.getElementById("lname").value;
       let email = document.getElementById("email").value;
       let password = document.getElementById("password").value;
+      let confirmpassword = document.getElementById("confirmpassword").value;
 
 
       let userrecord = [];
@@ -141,6 +145,11 @@
 
       if (exestinguser != null) {
         userrecord = exestinguser
+      }
+
+      if (password != confirmpassword) {
+        alert("Password and confirm password shoulde be match.");
+        return
       }
 
       let user = {
@@ -154,37 +163,37 @@
 
       let string = JSON.stringify(userrecord);
       localStorage.setItem("users", string)
-      await registerUser(fname,lname,email,password);
+      await registerUser(fname, lname, email, password);
       // alert("Register Succesfully");
       // window.location.replace("/login.html")
     })
 
     async function registerUser(fname, lname, email, password) {
-    let url = 'https://script.google.com/macros/s/AKfycbzhc1V6aBOk-1wNOuK16Br9hrKCRH6YpUHDxdJqS7K1N-1kVYnFawXMNVKovqZd924VtQ/exec';
-    const params = new URLSearchParams({
+      let url = 'https://script.google.com/macros/s/AKfycbzBac00fFptMobH0xi937zs7uroDFu0g0uXbhZCUz-jEkNWf0q0UEaJO3GwkaSNq0DIew/exec';
+      const params = new URLSearchParams({
         action: 'addUser',
         fname: fname,
         lname: lname,
         email: email,
         password: password
-    });
-    url = url + '?' + params.toString();
-    try {
+      });
+      url = url + '?' + params.toString();
+      try {
         const response = await fetch(url, {
-            method: 'GET' // If you prefer POST, you can use the previous example with POST method
+          method: 'GET' // If you prefer POST, you can use the previous example with POST method
         });
         const result = await response.json();
         console.log('Add User Response:', result);
         if (result.code == 201) {
-            alert("Register Succesfully");
-            window.location.replace("/login.html")
-        }else{
+          alert("Register Succesfully");
+          window.location.replace("/login.html")
+        } else {
           alert(result.error);
         }
-    } catch (error) {
+      } catch (error) {
         console.error('Error:', error);
+      }
     }
-}
 
 
   </script>

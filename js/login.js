@@ -1,7 +1,7 @@
 console.log("lets start");
 
 function getLoginUserName() {
-    return sessionStorage.getItem("authKey");
+    return localStorage.getItem("authKey");
 }
 
 let loginUrls = [
