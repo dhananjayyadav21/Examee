@@ -20,7 +20,7 @@ let loginUrls = [
 function checklogin() {
     let currentUrl = window.location.pathname.trim();
     if (getLoginUserName() == null && loginUrls.includes(currentUrl)) {
-        window.location = "/login.html";
+        window.location = "/register.html";
     } 
 }
 checklogin();
