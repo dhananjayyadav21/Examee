@@ -143,12 +143,12 @@ async function loadData(categoryName) {
                         {
                             "Subject": "Brand Management",
                             "converImage": "Bm.avif",
-                            "NotesUrl": "https://drive.google.com/drive/folders/16wF4ce1UwuFia1xg7m4A0_cNl4_v3xZX"
+                            "NotesUrl": "https://drive.google.com/file/d/1UsfNxBW6f0EgasNuZc9EeCMRE5jZFerP"
                         },
                         {
                             "Subject": "Hindi",
                             "converImage": "hindi.png",
-                            "NotesUrl": "https://drive.google.com/drive/folders/1Sd-TCUjaZMQJfNURcoUenZn4rHKiMg2Z"
+                            "NotesUrl": "https://drive.google.com/file/d/1ScOa3NbZM3_TrLWJG4D4dWRyTpwhmD1V"
                         },
                        
                     ]
@@ -342,7 +342,4 @@ async function loadData(categoryName) {
 }
 
 
-function getLoginUserName() {
-    return localStorage.getItem("authKey");
-}
 
