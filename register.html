@@ -164,8 +164,6 @@
       let string = JSON.stringify(userrecord);
       localStorage.setItem("users", string)
       await registerUser(fname, lname, email, password);
-      // alert("Register Succesfully");
-      // window.location.replace("/login.html")
     })
 
     async function registerUser(fname, lname, email, password) {
@@ -194,8 +192,6 @@
         console.error('Error:', error);
       }
     }
-
-
   </script>
   <script src="js/script.js"></script>
 

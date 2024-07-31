@@ -121,64 +121,38 @@
       let email = document.getElementById("email").value;
       let password = document.getElementById("password").value;
 
-      // var user = localStorage.getItem('users');
-      // var data = JSON.parse(user);
-
-      // data = data.find(x => {
-      //   return x.email == email
-      // });
-
-      loginUser(email,password);
-
-      // if (data == null) {
-      //   alert("wrong username or pasword");
-      //   document.getElementById('login-sumbit-btn').innerHTML = "wrong username or pasword"
-      // }
-      // else if (email == data.email && password == data.password) {
-      //   alert("login Succesfully");
-      //   sessionStorage.setItem("authKey", data.email)
-      //   window.location.replace("/notes.html")
-
-      // }
-
-      // else {
-      //   alert("wrong username or pasword");
-      //   document.getElementById('login-sumbit-btn').innerHTML = "wrong username or pasword"
-      // }
+      loginUser(email, password);
     });
 
     async function loginUser(email, password) {
-    let url = 'https://script.google.com/macros/s/AKfycbybtynNQqtfRysRiyKEo02bHRNqR_WQOuK0gZNWwA129d2eaNcXGy77qIPgvkcY7jYS4w/exec';
-    const params = new URLSearchParams({
+      let url = 'https://script.google.com/macros/s/AKfycbybtynNQqtfRysRiyKEo02bHRNqR_WQOuK0gZNWwA129d2eaNcXGy77qIPgvkcY7jYS4w/exec';
+      const params = new URLSearchParams({
         action: 'login',
         email: email,
         password: password
-    });
-    url = url + '?' + params.toString();
-    try {
+      });
+      url = url + '?' + params.toString();
+      try {
         const response = await fetch(url, {
-            method: 'GET' // If you prefer POST, you can use the previous example with POST method
+          method: 'GET' // If you prefer POST, you can use the previous example with POST method
         });
         const userRes = await response.json();
         console.log('Add User Response:', userRes);
 
         if (userRes != null) {
-            if (userRes.code == 200) {
-                localStorage.setItem("authKey", userRes.data.userId)
-                window.location.replace("/notes.html")
-            } else {
-                alert(userRes.error)
-            }
+          if (userRes.code == 200) {
+            localStorage.setItem("authKey", userRes.data.userId)
+            window.location.replace("/notes.html")
+          } else {
+            alert(userRes.error)
+          }
         }
 
-    } catch (error) {
+      } catch (error) {
         console.error('Error:', error);
+      }
     }
-}
-
   </script>
   <script src="js/script.js"></script>
-
 </body>
-
 </html>
