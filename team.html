@@ -6,14 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Examee</title>
   <link rel="icon" href="img/brandlog.png">
-  <link rel="stylesheet" href="css/video.css">
   <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="style.css">
   <script src="js/login.js"></script>
-  <script>
-    function test(e) {
-      console.log(e)
-    }
-  </script>
 </head>
 
 <body>
@@ -63,31 +58,48 @@
         <li><img class="sidebaar-tital-img" src="img/icons8-video-50.png" width="15px" height="15px">Video</li>
       </a>
     </div>
-
   </nav>
 
-  <iframe id="notes" src=""
-    onload="this.onload = null;this.src = new URLSearchParams(window.location.search).get('path')+'/preview';">
-  </iframe>
+  <!-- teams -->
+  <section class="team" id="team">
+    <h1>Our Team</h1>
 
-  <style>
-    iframe {
-      height: 90vh;
-      width: 100vw;
-      position: absolute;
-      top: 69px;
-    }
+    <div class="team-member">
+      <img src="img/pradeep.jpg" alt="Profile Picture">
+      <h2>PRADEEP YADAV</h2>
+      <p>Coordinator</p>
+    </div>
 
-    body {
-      position: relative;
-    }
+    <div class="team-member">
+      <img src="img/harsh.jpg" alt="Profile Picture">
+      <h2>HARSH SINGH</h2>
+      <p>Technical Coordinator</p>
+    </div>
 
-    @media only screen and (max-width: 700px) {
-      iframe {
-        top: 62px;
-      }
-    }
-  </style>
+    <div class="team-member">
+      <img src="img/pranay.jpg" alt="Profile Picture">
+      <h2>PRANAY KUMBHAR</h2>
+      <p>Digital & Documentation Coordinator</p>
+    </div>
+
+    <div class="team-member">
+      <img src="img/yashwant.jpg" alt="Profile Picture">
+      <h2>YASHWANT KUSHWAHA</h2>
+      <p>Digital & Ducumentation Coordinator</p>
+    </div>
+
+    <div class="team-member">
+      <img src="img/sachin.jpg" alt="Profile Picture">
+      <h2>SACHIN PAL</h2>
+      <p>Marketing & Social Media Coordinator</p>
+    </div>
+
+    <div class="team-member">
+      <img src="img/dhananjay.jpg" alt="Profile Picture">
+      <h2>DHANANJAY YADAV (NEEL)</h2>
+      <p>Head Coordinator</p>
+    </div>
+  </section>
 
   <!-- right side main -->
   <script>
