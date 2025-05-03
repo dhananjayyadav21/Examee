@@ -4,21 +4,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="We provide a comprehensive collection of notes, previous year question papers, and specialized courses to
-  enhance your exam preparation..">
-  <meta name="keywords"
-    content="examee Notes, examee Qution-Paper, examee RADAV NNotes, examee RADAV QUTION-PAPERS,examee RADAV college , examee , examee.com , examee.com , examee notes , radav notes, b.com notes, bsc-it notes, undergraduate notes, postgraduate notes,  it cources, devlopment notes, webdevlopment cources">
   <title>Examee</title>
-  <link rel="shortcut icon" href="img/brandlog.png">
   <link rel="icon" type="image/x-icon" href="img/brandlog.png">
-  <link rel="stylesheet" href="css/Qution-Paper.css">
+  <link rel="stylesheet" href="css/video.css">
   <link rel="stylesheet" href="css/nav.css">
   <script src="js/login.js"></script>
+  <script>
+    function test(e) {
+      console.log(e)
+    }
+  </script>
 </head>
 
 <body>
 
-  <!-- nav baar -->
   <nav>
     <div class="leftnav">
       <a href="/">
@@ -37,17 +36,15 @@
         <li onclick=closeSidebar()><img src="img/icons8-cross-30.png"></li>
       </a>
       <a href="#">
-        <li>
-          <img class="sidebaar-tital-img" src="img/category.png" width="25px" height="25px">
-          <select id="categoryOption" class="select-option-group" name="degree">
-            <option value="0" selected disabled>Category</option>
-            <option class="select-options value=" BSC-IT">BSC-IT</option>
-            <option class="select-options value=" MSC-IT">MSC-IT</option>
-            <option class="select-options value=" B.COM">B.COM</option>
-            <option class="select-options value=" 12TH-SCIENCE">12TH-SCIENCE</option>
-            <option class="select-options  value=" 12TH-COMMERCE">12TH-COMMERCE</option>
-          </select>
-        </li>
+        <li><img class="sidebaar-tital-img" src="img/category.png" width="25px" height="25px"><select
+            class="select-option-group" name="degree" id="">
+            <option value="0" hidden>Category</option>
+            <option value="BSC-IT">BSC-IT</option>
+            <option value="MSC-IT">MSC-IT</option>
+            <option value="B.COM">B.COM</option>
+            <option value="12TH-SCIENCE">12TH-SCIENCE</option>
+            <option value="12TH-COMMERCE">12TH-COMMERCE</option>
+          </select></li>
       </a>
       <a href="/notes.html">
         <li><img class="sidebaar-tital-img" src="img/icons8-notes-50.png" width="15px" height="15px">Notes</li>
@@ -69,9 +66,30 @@
 
   </nav>
 
-  <div class="grid" id="grid">
-    <!--CARD COINTAINER FOR ASSIGNMENT-->
-  </div>
+  <iframe id="notes" src=""
+    onload="this.onload = null;this.src = new URLSearchParams(window.location.search).get('path')+'/preview';">
+  </iframe>
+
+  <style>
+    iframe {
+      height: 90vh;
+      width: 100vw;
+      position: absolute;
+      top: 69px;
+    }
+
+    body {
+      position: relative;
+    }
+
+    @media only screen and (max-width: 700px) {
+      iframe {
+        top: 62px;
+      }
+    }
+  </style>
+
+  <!-- right side main -->
   <script>
     function showSidebar() {
       const sidebar = document.querySelector('.sidebar')
@@ -84,7 +102,6 @@
     }
   </script>
   <script src="js/script.js"></script>
-  <script src="js/Qution-paper.js"></script>
 
 </body>
 

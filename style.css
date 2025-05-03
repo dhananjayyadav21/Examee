@@ -548,6 +548,53 @@ text-decoration: none;
     }
 }
 
+/* team --------------------------------------------------- */
+.team {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+.team h1 {
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+.team-member {
+    display: inline-block;
+    width: 250px;
+    margin: 20px;
+    background-color: #ffffff;
+    padding: 50px 20px;
+    border-radius: 10px;
+    border: 2px solid;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.team-member h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #010101;
+}
+
+.team-member p {
+    font-size: 1em;
+    font-weight: 600;
+    color: #010101;
+}
 
 /* blogs --------------------------------------------------- */
 .home-blog-card-cointainer {

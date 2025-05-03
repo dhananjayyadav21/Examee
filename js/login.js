@@ -1,16 +1,16 @@
 console.log("lets start");
 
 function getLoginUserName() {
-    return sessionStorage.getItem("authKey");
+    return localStorage.getItem("authKey");
 }
 
 let loginUrls = [
-    "/notes.html",
+    // "/notes.html",
     "/practical.html",
     "/Qution-Paper.html",
     "/cource.html",
     "/video.html",
-    "/notes",
+    // "/notes",
     "/practical",
     "/Qution-Paper",
     "/cource",
@@ -20,7 +20,7 @@ let loginUrls = [
 function checklogin() {
     let currentUrl = window.location.pathname.trim();
     if (getLoginUserName() == null && loginUrls.includes(currentUrl)) {
-        window.location = "/login.html";
+        window.location = "/register.html";
     } 
 }
 checklogin();

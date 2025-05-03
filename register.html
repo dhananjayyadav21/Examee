@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Examee</title>
-  <link rel="icon" href="img/brandlog.png">
+  <link rel="shortcut icon" href="img/brandlog.png">
+  <link rel="icon" type="image/x-icon" href="img/brandlog.png">
   <link rel="stylesheet" href="css/register.css">
   <link rel="stylesheet" href="css/nav.css">
   <script src="js/login.js"></script>
@@ -86,10 +87,13 @@
 
         <div class="username form-input-group input-group-inline ">
           <label class="input-label">Password</label><br>
-          <input class="form-input" type="password" placeholder="passwordr" id="password" required>
+          <input class="form-input" type="password" placeholder="Password" id="password" required>
         </div>
 
-
+        <div class="username form-input-group input-group-inline ">
+          <label class="input-label">Confirm Password</label><br>
+          <input class="form-input" type="text" placeholder="Confirm Password" id="confirmpassword" required>
+        </div>
 
         <div class="remember-forget form-input-group">
           <div class="d-flex">
@@ -127,12 +131,13 @@
     //login form js---------------------------------------------
     let form = document.getElementById('form');
 
-    form.addEventListener("submit", (e) => {
+    form.addEventListener("submit", async (e) => {
       e.preventDefault()
       let fname = document.getElementById("fname").value;
       let lname = document.getElementById("lname").value;
       let email = document.getElementById("email").value;
       let password = document.getElementById("password").value;
+      let confirmpassword = document.getElementById("confirmpassword").value;
 
 
       let userrecord = [];
@@ -141,6 +146,11 @@
 
       if (exestinguser != null) {
         userrecord = exestinguser
+      }
+
+      if (password != confirmpassword) {
+        alert("Password and confirm password shoulde be match.");
+        return
       }
 
       let user = {
@@ -154,11 +164,35 @@
 
       let string = JSON.stringify(userrecord);
       localStorage.setItem("users", string)
-      alert("Register Succesfully");
-      window.location.replace("/login.html")
+      await registerUser(fname, lname, email, password);
     })
 
-
+    async function registerUser(fname, lname, email, password) {
+      let url = 'https://script.google.com/macros/s/AKfycbybtynNQqtfRysRiyKEo02bHRNqR_WQOuK0gZNWwA129d2eaNcXGy77qIPgvkcY7jYS4w/exec';
+      const params = new URLSearchParams({
+        action: 'addUser',
+        fname: fname,
+        lname: lname,
+        email: email,
+        password: password
+      });
+      url = url + '?' + params.toString();
+      try {
+        const response = await fetch(url, {
+          method: 'GET' // If you prefer POST, you can use the previous example with POST method
+        });
+        const result = await response.json();
+        console.log('Add User Response:', result);
+        if (result.code == 201) {
+          alert("Register Succesfully");
+          window.location.replace("/login.html")
+        } else {
+          alert(result.error);
+        }
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    }
   </script>
   <script src="js/script.js"></script>
 

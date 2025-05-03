@@ -12,6 +12,7 @@ async function reloadData() {
 
     let grid = document.getElementById("grid");
     grid.innerHTML = "";
+    const isLogin = getLoginUserName() !=null;
     data.forEach(sem => {
         const semNotesGroup = document.createElement('div');
         semNotesGroup.className = 'sem-notes-group';
@@ -32,7 +33,7 @@ async function reloadData() {
                 <img src="/notesimg/${element.converImage}" width="70px" onerror="this.onerror=null;this.src='/notesimg/practical-III.png';">
                     <h3 class="tital">${element.Subject}</h3>
                     <p>Download Journal Here</p>
-                    <button id="downloadBtn"><a href="${element.NotesUrl}">Journal PDF</a></button>`;
+                    <button id="downloadBtn"><a href="${isLogin? element.NotesUrl.includes('folder')? element.NotesUrl: '/view-notes.html?path='+element.NotesUrl:"/login.html"}">Journal PDF</a></button>`;
 
             let card = document.createElement("div");
             card.className = "card";
@@ -58,23 +59,23 @@ async function loadData(categoryName) {
                         {
                             "Subject": "Math (DM)",
                             "converImage": "practical-II.png",
-                            "NotesUrl": "https://drive.google.com/file/d/1-N3PaBhkjZzhA7F2IdDps2jaxvRg5U12/view?usp=drivesdk"
+                            "NotesUrl": "https://drive.google.com/file/d/1-N3PaBhkjZzhA7F2IdDps2jaxvRg5U12"
                         },
                         {
                             "Subject": "Operating System",
                             "converImage": "practical-II.png",
-                            "NotesUrl": "https://drive.google.com/file/d/1-MP2TP9fdJC6K930pvejxAYketVl8Ns2/view?usp=drivesdk"
+                            "NotesUrl": "https://drive.google.com/file/d/1-MP2TP9fdJC6K930pvejxAYketVl8Ns2"
                         },
                         
                         {
                             "Subject": "C Programming (IP)",
                             "converImage": "practical-II.png",
-                            "NotesUrl": "https://drive.google.com/file/d/1-NtrQ92tCdD446yscRn9C_njU8Q4R63a/view?usp=drivesdk"
+                            "NotesUrl": "https://drive.google.com/file/d/1-NtrQ92tCdD446yscRn9C_njU8Q4R63a"
                         },
                         {
                             "Subject": "DBMS",
                             "converImage": "practical-II.png",
-                            "NotesUrl": "https://drive.google.com/file/d/1-OOvTaamHI7X3pu5lHa5jpDIAYkvqNGh/view?usp=drivesdk"
+                            "NotesUrl": "https://drive.google.com/file/d/1-OOvTaamHI7X3pu5lHa5jpDIAYkvqNGh"
                         },
 
                     ]
@@ -85,12 +86,12 @@ async function loadData(categoryName) {
                         {
                             "Subject": "Web Development",
                             "converImage": "practical-I.png",
-                            "NotesUrl": "https://drive.google.com/file/d/1-QI0VwfweTO0rJAAp5Cd2g0XowyiwZF7/view?usp=drivesdk"
+                            "NotesUrl": "https://drive.google.com/file/d/1-QI0VwfweTO0rJAAp5Cd2g0XowyiwZF7"
                         },
                         {
                             "Subject": "OOPS (C++)",
                             "converImage": "practical-I.png",
-                            "NotesUrl": "https://drive.google.com/file/d/1-Rqw-vrIDraXpmBv9FqkMAwC9kVMgynf/view?usp=drivesdk"
+                            "NotesUrl": "https://drive.google.com/file/d/1-Rqw-vrIDraXpmBv9FqkMAwC9kVMgynf"
                         },
                     ]
                 }
@@ -105,22 +106,22 @@ async function loadData(categoryName) {
                         {
                             "Subject": "Data Mining",
                             "converImage": "image5.jpg",
-                            "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy/view?usp=drivesdk"
+                            "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy"
                         },
                         {
                             "Subject": "Distributed System",
                             "converImage": "image6.jpg",
-                            "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy/view?usp=drivesdk"
+                            "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy"
                         },
                         {
                             "Subject": "Data Analysis Tools",
                             "converImage": "image5.jpg",
-                            "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy/view?usp=drivesdk"
+                            "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy"
                         },
                         {
                             "Subject": "Software Testing",
                             "converImage": "image6.jpg",
-                            "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy/view?usp=drivesdkf"
+                            "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy"
                         }
                     ]
                 },
@@ -130,22 +131,22 @@ async function loadData(categoryName) {
                         {
                             "Subject": "Mobile Computing",
                             "converImage": "image7.jpg",
-                            "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy/view?usp=drivesdk"
+                            "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy"
                         },
                         {
                             "Subject": "Advanced Computer Networks",
                             "converImage": "image8.jpg",
-                            "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy/view?usp=drivesdk"
+                            "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy"
                         },
                         {
                             "Subject": "Cloude Computing",
                             "converImage": "image7.jpg",
-                            "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy/view?usp=drivesdk"
+                            "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy"
                         },
                         {
                             "Subject": "Advanced Database System",
                             "converImage": "image8.jpg",
-                            "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy/view?usp=drivesdk"
+                            "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy"
                         }
                     ]
                 }
@@ -160,22 +161,22 @@ async function loadData(categoryName) {
                         {
                             "Subject": "Bachelor of Commerce",
                             "converImage": "image9.jpg",
-                            "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy/view?usp=drivesdk"
+                            "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy"
                         },
                         {
                             "Subject": "Accounting & Finance",
                             "converImage": "image10.jpg",
-                            "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy/view?usp=drivesdk"
+                            "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy"
                         },
                         {
                             "Subject": "Banking & Insurance",
                             "converImage": "image9.jpg",
-                            "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy/view?usp=drivesdk"
+                            "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy"
                         },
                         {
                             "Subject": "Fincial Marketing",
                             "converImage": "image10.jpg",
-                            "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy/view?usp=drivesdk"
+                            "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy"
                         }
 
                     ]
@@ -197,27 +198,27 @@ async function loadData(categoryName) {
                         {
                             "Subject": "Maths-I",
                             "converImage": "image13.jpg",
-                            "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy/view?usp=drivesdk"
+                            "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy"
                         },
                         {
                             "Subject": "Maths-II",
                             "converImage": "image13.jpg",
-                            "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy/view?usp=drivesdk"
+                            "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy"
                         },
                         {
                             "Subject": "Physics",
                             "converImage": "image14.jpg",
-                            "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy/view?usp=drivesdk"
+                            "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy"
                         },
                         {
                             "Subject": "Chemistry",
                             "converImage": "image13.jpg",
-                            "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy/view?usp=drivesdk"
+                            "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy"
                         },
                         {
                             "Subject": "Biology",
                             "converImage": "image13.jpg",
-                            "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy/view?usp=drivesdk"
+                            "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy"
                         },
                         
                     ]
@@ -239,27 +240,27 @@ async function loadData(categoryName) {
                         {
                             "Subject": "Mathamatics & Statics",
                             "converImage": "image9.jpg",
-                            "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy/view?usp=drivesdk"
+                            "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy"
                         },
                         {
                             "Subject": "Economics",
                             "converImage": "image10.jpg",
-                            "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy/view?usp=drivesdk"
+                            "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy"
                         },
                         {
                             "Subject": "Book Kepping and Accountancy",
                             "converImage": "image9.jpg",
-                            "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy/view?usp=drivesdk"
+                            "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy"
                         },
                         {
                             "Subject": "Business Studies",
                             "converImage": "image10.jpg",
-                            "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy/view?usp=drivesdk"
+                            "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy"
                         },
                         {
                             "Subject": "Accountancy",
                             "converImage": "image10.jpg",
-                            "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy/view?usp=drivesdk"
+                            "NotesUrl": "https://drive.google.com/file/d/11PpbVd4Qw3G8EO17fUS4zIlu24zl_bdy"
                         }
 
                     ]
